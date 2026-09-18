@@ -15,7 +15,7 @@ from pathlib import Path
 from dotenv import load_dotenv
 
 # Cargar variables de entorno forzando la codificación UTF-8
-load_dotenv(encoding="utf-8", override=True)
+load_dotenv(encoding="utf-8", override=False)
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -150,3 +150,8 @@ MAILERS = {
         "BACKEND": "django.core.mail.backends.console.EmailBackend",
     },
 }
+
+# ==========================================
+# CI/CD Pipeline Validation Test - Taller 8
+# ==========================================
+
