@@ -17,8 +17,9 @@ pipeline {
         stage('2. Pruebas Automatizadas (Testing)') {
             steps {
                 echo 'Ejecutando la suite de pruebas del Backend en Django...'
-                sh 'echo "Validando archivos del proyecto..."'
-                sh 'ls -la'
+                sh 'echo "Ejecutando pruebas unitarias..."'
+                sh 'echo "FAILED: modulo_inventario/pruebas/test_models.py::test_calculo_precio_con_iva - AssertionError"'
+                sh 'exit 1'
             }
         }
 
